@@ -80,7 +80,7 @@ body * {
     color: #f0ffffde;
     font-size: 12pt;
     box-shadow: 0 10px 40px #00000056;
-    outline: none;
+    outline: #d212d2b9;
     box-sizing: border-box;
 }
 
@@ -103,10 +103,10 @@ body * {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #2b134b;
-    background: #00ff88;
+    color: #f0ffffde;
+    background: #7b0a7b;
     cursor: pointer;
-    box-shadow: 0 10px 40px -12px #00ff8052;
+    box-shadow: 0 10px 40px -12px #7b0a7b9b;
 }
 
 /*Para telas um pouco menores*/
