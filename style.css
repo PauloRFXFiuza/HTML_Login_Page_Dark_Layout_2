@@ -30,7 +30,7 @@ body * {
 .left-login > h1{
     font-size: 3vw;
     color: #e421e4;
-}
+}    
 
 .left-login-image{
     width: 35vw;
@@ -57,7 +57,7 @@ body * {
 }
 
 .card-login > h1{
-    color: #00ff88;
+    color: #d212d2;
     font-weight: 800;
     margin:0;
 }
