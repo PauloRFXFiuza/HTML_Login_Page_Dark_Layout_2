@@ -80,7 +80,7 @@ body * {
     color: #f0ffffde;
     font-size: 12pt;
     box-shadow: 0 10px 40px #00000056;
-    outline: #d212d2b9;
+    outline-color: #d212d2b9;
     box-sizing: border-box;
 }
 
