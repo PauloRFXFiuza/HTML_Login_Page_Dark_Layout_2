@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw; 
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    font-size: 3vw;
+    color: #77ffc0;
+}
+
+.left-login-image{
+    width: 35vw;
+}
+
+.right-login{
+    width: 50vw; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #00000056;
+}
+
+.card-login > h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin:0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px; 
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0 10px 40px -12px #00ff8052;
+}
+
+/*Para telas um pouco menores*/
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+/*Configurações de tela da maioria dos smartphones*/
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login > h1{
+        display: none;
+    }
+
+    .left-login{
+        width:100%;
+        height: auto;
+    }
+
+    .right-login{
+        width:100%;
+        height: auto;
+    }
+
+    .left-login-image{
+        width: 50vw;
+    }
+    
+    .card-login{
+        width: 90%;
+    }
+}
+
+/*
+display: flex; organiza os elementos de lado-a-lado
+
+justify-content: center; justifica e centraliza os elementos no eixo x
+
+align-items: center; centraliza os elementos no eixo y
+
+flex-direction: column; organizar em forma de coluna
+
+width:60%; neste caso .card-login faz parte de .right-login, ou seja o width será 60% de 50vw
+
+box-shadow: x y z t w; sombreamento do elemento- 
+x= deslocamento da sombra direita ou esquerda; 
+y= deslocamento da sombra cima ou baixo;  
+z= blur (desfoque), quanto mais px, mais desfoque;
+t= espalahamento (spread) da sombra;
+w= cor da sombra.
+
+com o flex-direction: column- justify-content torna-se o eixo y e o align-items torna-se o eixo x;
+neste contexto- align-items: flex-start; os elementos ficarão mais à esquerda possível
+neste contexto- justify-content: center; os elementos ficarão centralizados noeixo y
+
+pt-> No contexto de HTML e CSS, a unidade pt (abreviação de point) é uma unidade de medida tipográfica que 
+historicamente vem da impressão e design gráfico. Ela é usada para definir tamanhos, especialmente de textos, 
+e representa 1/72 de uma polegada.
+
+Como funciona a unidade pt?
+1pt = 1/72 polegada
+Em dispositivos com uma densidade padrão de 96dpi (pontos por polegada), 1pt equivale a aproximadamente 1,333px.
+
+outline: none; outline é uma linha de borda, que dá ênfase no objeto ao clicar nele; 
+ao inserir none, essa linha de borda é excluída 
+
+box-sizing: border-box; os limites dos elementos filhos coincidem com os limites dos elementos pais; 
+neste contexto, os limites das divisórias (div) dos inputs coincidirão com os limites da divisória textfield
+
+margin-bottom; margem da parte de baixo do elemento
+
+text-transform: uppercase; transforma o texto para todas as letras maiúsculas
+
+letter-spacing: 4px; significa o quanto cada letra do texto será espaçada entre si
+
+cursor: pointer; significa que muda a setinha padrão do mouse para a mão com o dedo indicado apontando,
+quando se coloca o cursor do mouse no objeto em questão
+
+para pesquisar sobre fontes, utilizar o google fonts- https://fonts.google.com/
+
+para pesquisar sobre imagens , utilizar o Storyset - https://storyset.com/
+
+body * {
+    box-sizing: border-box;
+}
+
+Isso significa que para todos os elementos de body, box-sizing: border-box; - conforme explicado acima
+
+Responsividade de tela: 
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+O @media only screen and (max-width: ...) é uma regra CSS usada em Media Queries, que são utilizadas para criar 
+layouts responsivos. Essa regra permite aplicar estilos específicos com base em certas condições, como o tamanho da tela do dispositivo.
+
+Descrição dos componentes:
+@media:
+
+Define o início de uma media query, especificando condições para aplicar um bloco de estilos.
+only:
+
+É opcional e usado como uma forma de filtrar dispositivos que suportam o recurso especificado.
+Hoje, pode ser omitido sem problemas, pois a maioria dos navegadores modernos entende media queries.
+screen:
+
+Define o tipo de mídia para o qual os estilos serão aplicados. No caso de screen,
+ os estilos se aplicam a telas (monitores, smartphones, tablets, etc.).
+(max-width: ...):
+
+Define a largura máxima da viewport (área visível do navegador) na qual os estilos serão aplicados.
+Por exemplo, (max-width: 600px) significa que os estilos dentro dessa media query serão aplicados apenas quando a 
+largura da viewport for de 600 pixels ou menos.
+
+
+vw= viewport width
+vh= viewport height
+As unidades vw (viewport width) e vh (viewport height) são medidas relativas usadas em CSS para dimensionar 
+elementos com base no tamanho da área visível do navegador, conhecida como viewport.
+Detalhamento:
+vw (viewport width):
+Representa 1% da largura da viewport.
+Por exemplo:
+Se a largura da viewport é de 1000 pixels:
+1vw = 10px
+50vw = 500px (metade da largura da viewport)
+vh (viewport height):
+
+Representa 1% da altura da viewport.
+Por exemplo:
+Se a altura da viewport é de 800 pixels:
+1vh = 8px
+100vh = 800px (altura total da viewport)
+*/
