@@ -30,6 +30,7 @@ body * {
 .left-login > h1{
     font-size: 3vw;
     color: #e421e4;
+    text-shadow: 3px 3px 10px #7b0a7b9b;
 }    
 
 .left-login-image{
@@ -60,6 +61,7 @@ body * {
     color: #d212d2;
     font-weight: 800;
     margin:0;
+    text-shadow: 3px 3px 10px #7b0a7b9b;
 }
 
 .textfield{
